@@ -3,7 +3,7 @@ import './App.css';
 
 export default function App() {
   const [city, setCity] = useState("");
-  const [info, setInfo] = useState("enter a pincode");
+  const [info, setInfo] = useState("enter a city Name");
   const [pin, setPin] = useState("");
   const [info2, setInfo2] = useState("");
 
@@ -52,9 +52,6 @@ export default function App() {
       <h1>Weather for You</h1>
       <input type="text" placeholder='City' value={city} onChange={(e) => setCity(e.target.value)} />
       <button onClick={getWeather}>Get Weather</button>
-      <br /><div>OR</div>
-      <input type="number" placeholder='Pincode' value={pin} onChange={(e) => setPin(e.target.value)} />
-      <button onClick={getWeatherByPincode}>Get Weather</button>
       <p>{info}<br />{info2}</p>
     </>
   );
